@@ -1,0 +1,11 @@
+(venv) theia:ci-cd-final-project$ echo "SERVICERUNNING: $(oc get pods -l app=cicd-app -o jsonpath='{.items[0].status.phase}')"
+SERVICERUNNING: Running
+(venv) theia:ci-cd-final-project$ oc logs deployment/cicd-app
+[2026-01-31 12:38:34 +0000] [1] [INFO] Starting gunicorn 20.1.0
+[2026-01-31 12:38:34 +0000] [1] [INFO] Listening at: http://0.0.0.0:8000 (1)
+[2026-01-31 12:38:34 +0000] [1] [INFO] Using worker: sync
+[2026-01-31 12:38:34 +0000] [7] [INFO] Booting worker with pid: 7
+[2026-01-31 12:38:34 +0000] [INFO] [log_handlers] Logging handler established
+[2026-01-31 12:38:34 +0000] [INFO] [__init__] **********************************************************************
+[2026-01-31 12:38:34 +0000] [INFO] [__init__] ******************  S E R V I C E   R U N N I N G  *******************
+[2026-01-31 12:38:34 +0000] [INFO] [__init__] **********************************************************************
